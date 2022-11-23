@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+<!--Loads our static folder we created containing all the static assets-->
+{% load static %}
+
+
+{% block title %}Charlie Bell - Projects{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body">
+                    <b>Introduction of project page along with <a href="https://github.com/Charlie-Bell?tab=repositories">My GitHub</a> (Also add icons) </b>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" id="project-directory">
+            <div class="grid justify-content-center">
+                <a href="https://github.com/Charlie-Bell/landslide-detection" target="_blank" class="image-container">
+                    <img id="landslide" src={% static 'theme/assets/img/landslide.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
+                    <div class="px-1">
+                        <h4>Landslide Detection</h4>
+                        <p>Using artificial intelligence to identify landslides in Hong Kong based on topographic, geological and rainfall data.</p>
+                        <h6>Keywords: CNN, Boosting, Blending</h6>
+                    </div>
+                </a>
+                <a href="https://github.com/Charlie-Bell/chatbot" target="_blank" class="image-container">
+                    <img id="chatbot" src={% static 'theme/assets/img/chatbot.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
+                    <div class="px-1">
+                        <h4>Chazbot</h4>
+                        <p>Using transformers to generate custom datasets and create a conversational Q&#38;A AI.</p>
+                        <h6>Keywords: NLP, Transformers, GPT-3</h6>
+                    </div>
+                </a>
+                <a href="https://github.com/Charlie-Bell/Django-K8S" target="_blank" class="image-container">
+                    <img id="portfolio" src={% static 'theme/assets/img/portfolio.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
+                    <div class="px-1">
+                        <h4>Portfolio</h4>
+                        <p>This portfolio website was created using Django, containerised in Docker with orchestration by Kubernetes.</p>
+                        <h6>Keywords: Django, K8S, Docker</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body"></div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+{% endblock %}
+
+<!--https://mdbootstrap.com/docs/standard/extended/square-buttons/-->

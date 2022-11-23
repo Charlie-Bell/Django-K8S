@@ -1,0 +1,9 @@
+django==3.2
+gunicorn
+requests
+django-dotenv
+psycopg2-binary
+django-storages
+boto3
+bleach==5.0.1 # Bleach for cleaning form data to prevent injection of bad characters into e-mails
+django-cors-headers

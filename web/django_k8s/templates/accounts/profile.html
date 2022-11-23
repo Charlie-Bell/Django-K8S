@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Charlie Bell - Profile{% endblock %}
+
+{% block content %}
+<h1>
+    {{ user.get_full_name }} (@{{user.username}}) <!--We can reference 'user' here because it is created by django.contrib.auth User object when we made the superuser. Read from database?-->
+</h1>
+
+{% with profile=user.profile %} <!--We assigned a user to the profile object we created in the admin console-->
+    {% if profile %}
+        <h2>
+            {{ profile.persona|default:"" }}
+        </h2>
+        <div>
+            {{ profile.bio|default:"" }}
+        </div>
+        <div>
+            {% with website=profile.website|default:"" %}
+                <a href="{{ website }}">{{ website }}</a>
+            {% endwith %}
+        </div>
+        <br/>
+        <div>
+            Interests:
+            {% for interest in profile.interests.all %}
+                <span>
+                    {{ interest.name }}{% if not forloop.last %}, {% endif %}
+                </span>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+{% endblock %}
