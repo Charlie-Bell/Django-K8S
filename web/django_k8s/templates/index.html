@@ -8,58 +8,43 @@
 
 {% block content %}
 
-<body>
+<body class="bg-secondary">
 
     <br>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
             <div class="col-md-3">
                 <div class="card card-body" id="profile-wrapper">
-                    <img id="profile-pic" src={% static 'theme/assets/img/GodHelpUs.jpg' %} class="img-fluid" alt="Image cannot be displayed" />
+                    <img id="profile-pic" src={% static 'theme/assets/img/me.jpg' %} class="profile-pic" alt="Image cannot be displayed" />
                     <hr>
-                    <h4>Hi I'm Charlie!</h4>
-                    <p>I love Python, Machine Learning, Making things</p>
+                    <div class="grid justify-content-center">
+                        <a href = "https://github.com/Charlie-Bell/"><i class="fa-brands fa-github fa-2x text-dark"></i></a>
+                        <a href = "https://www.linkedin.com/in/charlie-bell-04989bb5/"><i class="fa-brands fa-linkedin fa-2x text-blue"></i></a>
+                        <a href = "mailto: charlie.james.bell@gmail.com"><i class="fa-solid fa-envelope fa-2x text-red"></i></a>
+                        <a href = "https://wa.me/4915146944867"><i class="fa-brands fa-whatsapp fa-2x text-green"></i></a>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <a href={% static 'theme/assets/img/me.jpg' %} download>
+                            <button class="btn cb-bg-primary btn-xl text-white" id="downloadCV" type="download">CV <i class="fa fa-download fa-1x text-white"></i></button>
+                        </a>
+                    </div>
                 </div>
+                <br>
             </div>
             <div class="col-md-9">
-                <div class="card card-body">
-                    <p>To do:
+                <div class="container text-center text-white">
+
+                <h1>Hi there, I'm Charlie!</h1>
+                <p><b>
+                    I love Python, Machine Learning, Making things.
                     <br>
-                    -Format all fonts
-                    <br>
-                    -Add contact form https://www.youtube.com/watch?v=94ylwr2r3Hs&list=PL39pssg07dpDJas1vxb7Dyw5f8SkAw6c-&index=7
-                    <br>
-                    -Insert API for chatbot etc.
-                    <br>
-                    -Fill out portfolio projects https://www.youtube.com/watch?v=pLN-OnXjOJg
-                    <br>
-                    -Purchase domain and deploy project with Kubernetes
-                    <br>
-                    -Test website on mobile (after deployment)
-                    <br>
-                    -<a href="https://github.com/Charlie-Bell">My GitHub</a> (Also add icons)
-                    </p>
-                </div>
+                    To do: Finish GitHub. 6 projects to go. RNN. Finance. Clustering. Recommender systems. More NLP.
+                </b></p>
+            </div>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-        </div>
+        
     </div>
 
 </body>

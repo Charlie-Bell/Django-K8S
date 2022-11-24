@@ -8,17 +8,19 @@
 
 {% block content %}
 
-<body>
+<body class="bg-secondary">
 
     <br>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-body">
-                    <b>Introduction of project page along with <a href="https://github.com/Charlie-Bell?tab=repositories">My GitHub</a> (Also add icons) </b>
-                </div>
+                <h1 class="text-white">My projects</h1>
+                <p class="text-white">
+                    <b>Here you will find links to my public projects in my <a href="https://github.com/Charlie-Bell?tab=repositories">GitHub</a> repositories.</b>
+                </p>
             </div>
         </div>
+        <hr class="bg-white">
         <br>
         <div class="row" id="project-directory">
             <div class="grid justify-content-center">
@@ -39,7 +41,7 @@
                     </div>
                 </a>
                 <a href="https://github.com/Charlie-Bell/Django-K8S" target="_blank" class="image-container">
-                    <img id="portfolio" src={% static 'theme/assets/img/portfolio.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
+                    <img id="portfolio" src={% static 'theme/assets/img/chatbot.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
                     <div class="px-1">
                         <h4>Portfolio</h4>
                         <p>This portfolio website was created using Django, containerised in Docker with orchestration by Kubernetes.</p>
@@ -48,14 +50,7 @@
                 </a>
             </div>
         </div>
-        <br>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-body"></div>
-            </div>
-        </div>
-        <br>
+
     </div>
 
 {% endblock %}
