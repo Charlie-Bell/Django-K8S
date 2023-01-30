@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Charlie Bell - Contact{% endblock %}
+
+{% block content %}
+<body class="bg-secondary">
+
+    <br/>
+    <!--Contact Section Form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                {% if success %}
+                    <div class="alert alert-success" role="alert">
+                        Message has been sent!
+                    </div>
+                {% endif %}
+
+                <h1 class="text-white">Contact me</h1>
+
+                <p class="text-white">
+                    <b>Write me a little something something using the form below or directly to my e-mail address: <a href= "mailto: charlie.james.bell@gmail.com">charlie.james.bell@gmail.com</a>.</b>
+                </p>
+
+                <form id="contactForm" name="sentMessage" novalidate="novalidate" method="post">
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            Error: {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    {% for field in form %}
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <p  class="text-white">{{ field.label_tag }}</p>
+                            {{ field }}
+                            {% for error in field.errors %}
+                            <p class="help-block text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <br/>
+                    <div class="form-group"><button class="btn cb-bg-primary btn-xl text-white" id="sendMessageButton" type="submit">Send</button></div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock %}

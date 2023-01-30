@@ -1,0 +1,124 @@
+/* main.css overrides all other .css functions and classes */
+
+
+/* Mobile: Media query referencing the 'main' ID defined in base.html */
+#main {
+    padding-top: 74px;
+}
+
+/* Desktop: Media query referencing the 'main' ID defined in base.html */
+@media (min-width: 992px) {
+    #main {
+      padding-top: 104px;
+    }
+}
+
+/* Navigation banner formatting*/
+@font-face {
+  font-family: "TitilliumWeb-Bold";
+  src:
+  url("fonts/TitilliumWeb-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src:
+  url("fonts/TitilliumWeb-Regular.woff") format("woff");
+}
+
+.navbar-brand {
+  font-family: "TitilliumWeb-Bold";
+}
+
+.navbar-toggler {
+  font-family: "TitilliumWeb-Bold";
+}
+
+#mainNav {
+  font-family: "TitilliumWeb-Bold"
+}
+
+button{
+  font-family: "TitilliumWeb-Bold"
+}
+
+.cb-bg-primary {
+  background-color: #f34a5a;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom .2s, color .2s;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #f34a5a;
+  border-color: #f34a5a;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  color: #fff;
+  background-color: #f34a5a;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active:hover {
+  color: #fff;
+  background-color: #f34a5a;
+}
+
+
+/* Formatting the Body */
+body{
+  background-color: #f8f8f8!important;
+}
+
+#profile-wrapper{
+  text-align: center;
+}
+
+#profile-pic{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.image-container {
+  max-width: 300px;
+  position: relative;
+  display: inline-block;
+}
+
+.image-container > img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.image-container > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: opacity 0.5s;
+  border-radius: 0.5rem;
+}
+
+.image-container:hover > div {
+  opacity: 1;
+}
