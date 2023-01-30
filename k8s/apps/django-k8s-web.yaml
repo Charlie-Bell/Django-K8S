@@ -1,0 +1,47 @@
+# template taken from https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-k8s-web-deployment
+  labels:
+    app: django-k8s-web-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: django-k8s-web-deployment
+  template:
+    metadata:
+      labels:
+        app: django-k8s-web-deployment
+    spec:
+      containers:
+      - name: django-k8s-web
+        image: registry.digitalocean.com/cb-k8s/django-k8s-web:latest
+        imagePullPolicy: Always
+        envFrom:
+         - secretRef:
+             name: django-k8s-web-prod-env
+        env:
+          - name: PORT
+            value: "8002"
+        ports:
+         - containerPort: 8002
+      imagePullSecrets:
+       - name: container-registry-login
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-k8s-web-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8002
+  selector:
+    app: django-k8s-web-deployment
