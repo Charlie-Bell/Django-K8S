@@ -28,7 +28,7 @@ spec:
         ports:
          - containerPort: 8002
       imagePullSecrets:
-       - name: container-registry-login
+       - name: cb-k8s
 
 ---
 
