@@ -632,12 +632,12 @@ progress {
   color: #6c757d;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 0px) {
   .container-sm, .container {
-    max-width: 540px;
+    max-width: 790px;
     width: 100%;
-    padding-right: var(--bs-gutter-x, 0.95rem);
-    padding-left: var(--bs-gutter-x, 0.95rem);
+    padding-right: var(--bs-gutter-x, 0.85rem);
+    padding-left: var(--bs-gutter-x, 0.85rem);
     margin-right: auto;
     margin-left: auto;
   }
