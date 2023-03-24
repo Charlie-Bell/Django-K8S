@@ -8,6 +8,6 @@ def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render({}, request))
 
-def projects(request):
-    template = loader.get_template('projects.html')
+def creations(request):
+    template = loader.get_template('creations.html')
     return HttpResponse(template.render({}, request))

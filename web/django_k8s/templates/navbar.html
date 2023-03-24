@@ -1,5 +1,5 @@
 {% url 'public:index' as index_url %}
-{% url 'public:projects' as projects_url %}
+{% url 'public:creations' as creations_url %}
 {% url 'contact:contact' as contact_url %}
 
 <!-- Navigation-->
@@ -12,8 +12,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-3 px-lg-3 rounded {% if request.path == index_url %}active{% endif %}" href={{ index_url }}>Portfolio</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-3 px-lg-3 rounded {% if request.path == projects_url %}active{% endif %}" href={{ projects_url }}>Projects</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-3 px-lg-3 rounded {% if request.path == index_url %}active{% endif %}" href={{ index_url }}>About</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-3 px-lg-3 rounded {% if request.path == creations_url %}active{% endif %}" href={{ creations_url }}>Creations</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-3 px-lg-3 rounded {% if request.path == contact_url %}active{% endif %}" href={{ contact_url }}>Contact</a></li>
             </ul>
         </div>

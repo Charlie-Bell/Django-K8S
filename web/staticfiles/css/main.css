@@ -1,5 +1,7 @@
 /* main.css overrides all other .css functions and classes */
-
+:root {
+  --bs-primary: #f34a5a;
+}
 
 /* Mobile: Media query referencing the 'main' ID defined in base.html */
 #main {
@@ -43,7 +45,7 @@ button{
 }
 
 .cb-bg-primary {
-  background-color: #f34a5a;
+  background-color: var(--bs-primary);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
@@ -52,18 +54,18 @@ button{
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #f34a5a;
-  border-color: #f34a5a;
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #fff;
-  background-color: #f34a5a;
+  background-color: var(--bs-primary);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active:hover {
   color: #fff;
-  background-color: #f34a5a;
+  background-color: var(--bs-primary);
 }
 
 

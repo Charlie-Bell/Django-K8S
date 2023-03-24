@@ -34,6 +34,8 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #f34a5a;
+  --bs-primary-yellow: #ffae00;
+  --bs-primary-red: #f34a5a;
   --bs-secondary: #d33a4a;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -630,43 +632,54 @@ progress {
   color: #6c757d;
 }
 
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
+@media (min-width: 540px) {
   .container-sm, .container {
     max-width: 540px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.95rem);
+    padding-left: var(--bs-gutter-x, 0.95rem);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 790px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: 790px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0rem);
+    padding-left: var(--bs-gutter-x, 0rem);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .row {
