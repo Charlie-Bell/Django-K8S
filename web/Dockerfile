@@ -1,5 +1,5 @@
 # Our platform
-FROM python:3.10.4-slim
+FROM python:3.10.13-slim
 
 # Copy the project directory into a Docker directory named "app". Ignore files started in .dockerignore
 COPY . /app
