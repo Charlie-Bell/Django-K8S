@@ -4,9 +4,10 @@
 {% load static %}
 
 
-{% block title %}Charlie Bell - Creations{% endblock %}
+{% block title %}Charlie Bell - Experiments{% endblock %}
 
 {% block content %}
+{% url 'contact:contact' as contact_url %}
 
 <body class="bg-secondary">
 
@@ -14,12 +15,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-white">My creations</h1>
+                <h2 class="text-white">My experiments</h2>
                 <p class="text-white">
                     <b>
-                        Here you will find links to my creations in my <a href="https://github.com/Charlie-Bell?tab=repositories">GitHub</a> repositories to demonstrate how I operate.
-                        These are just samples of the kind of things I make!
-                        To find out more about what I have experience with, simply contact me.
+                        Here you will find links to my experiments in my <a href="https://github.com/Charlie-Bell?tab=repositories">GitHub</a> repositories - these samples are purely recreational and not made for production.<br>
+                        To find out about my professional experience, checkout my <a href={% static 'theme/assets/Charlie Bell CV.docx' %} download>CV</a> or simply <a href={{ contact_url }}>contact me</a>.
                     </b>
                 </p>
             </div>
@@ -28,6 +28,14 @@
         <br>
         <div class="row" id="project-directory">
             <div class="grid justify-content-center">
+                <a href="https://github.com/Charlie-Bell/reddit-bot-gpt2-bert" target="_blank" class="image-container">
+                    <img id="reddit-bot" src={% static 'theme/assets/img/reddit-bot.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
+                    <div class="p-3">
+                        <h4>Reddit Bot with GPT2 and BERT</h4>
+                        <p>Fine-tuning a GAN-inspired generative LLM network with GPT2 and BERT.</p>
+                        <h6>Keywords: GPT, BERT, LLM, Fine-tuning</h6>
+                    </div>
+                </a>
                 <a href="https://github.com/Charlie-Bell/stack-overflow-classifier" target="_blank" class="image-container">
                     <img id="stackoverflow" src={% static 'theme/assets/img/stackoverflow.jpg' %} class="img-fluid" alt="Image cannot be displayed"/>
                     <div class="p-3">
