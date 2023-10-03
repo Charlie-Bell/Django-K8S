@@ -55,6 +55,7 @@
   --bs-blue-rgb: 0, 119, 181;
   --bs-red-rgb: 234, 67, 53;
   --bs-green-rgb: 37, 211, 102;
+  --bs-teal-rgb: 26, 188, 156;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -7792,6 +7793,11 @@ textarea.form-control-lg {
 .text-green {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-green-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-teal {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-teal-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-body {
